@@ -29,6 +29,7 @@ router.post('/author', async (req: Request, res: Response) => {
         res.status(400).json({message: error})
     }
 });
+
 router.get('/author', async (req: Request, res: Response) => {
     try{
         const data = await Author.find().populate("contactData");
